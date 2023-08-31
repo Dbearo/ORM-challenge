@@ -11,24 +11,24 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement:true
+      autoIncrement: true,
     },
 
     product_id: {
       type: DataTypes.INTEGER,
-      refrences: {
-        model: 'product',
-        key:'id'
-        }
+      references: { // Correct spelling: references
+        model: 'Product',
+        key: 'id',
+      },
     },
 
     tag_id: {
       type: DataTypes.INTEGER,
-      refrences: {
-        model: 'tag',
-        key:'id'
-        }
-    } 
+      references: { // Correct spelling: references
+        model: 'Tag',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
@@ -38,6 +38,5 @@ ProductTag.init(
     modelName: 'product_tag',
   }
 );
-
 
 module.exports = ProductTag;
