@@ -16,7 +16,7 @@ ProductTag.init(
 
     product_id: {
       type: DataTypes.INTEGER,
-      references: { // Correct spelling: references
+      references: { 
         model: 'Product',
         key: 'id',
       },
@@ -24,7 +24,7 @@ ProductTag.init(
 
     tag_id: {
       type: DataTypes.INTEGER,
-      references: { // Correct spelling: references
+      references: { 
         model: 'Tag',
         key: 'id',
       },
